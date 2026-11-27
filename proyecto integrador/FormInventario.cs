@@ -240,5 +240,18 @@ namespace proyecto_integrador
         {
 
         }
+
+        private void dgvLotes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Porcentajes ventanaPorcentajes = new Porcentajes();
+            ventanaPorcentajes.FormClosed += (s, args) => this.Close();
+            ventanaPorcentajes.Show();
+            this.Hide();
+        }
     }
 }

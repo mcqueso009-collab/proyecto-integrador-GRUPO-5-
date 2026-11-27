@@ -59,6 +59,7 @@
             lblEncargado = new Label();
             cmbSemillas = new ComboBox();
             lblSemilla = new Label();
+            Porcentajes = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvLotes).BeginInit();
             grpStock.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numCantidad).BeginInit();
@@ -78,6 +79,7 @@
             dgvLotes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvLotes.Size = new Size(1292, 388);
             dgvLotes.TabIndex = 0;
+            dgvLotes.CellContentClick += dgvLotes_CellContentClick;
             // 
             // grpStock
             // 
@@ -177,6 +179,7 @@
             // grpNuevoLote
             // 
             grpNuevoLote.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            grpNuevoLote.Controls.Add(Porcentajes);
             grpNuevoLote.Controls.Add(btnCrearLote);
             grpNuevoLote.Controls.Add(txtUnidad);
             grpNuevoLote.Controls.Add(lblUnidad);
@@ -302,6 +305,17 @@
             lblSemilla.TabIndex = 10;
             lblSemilla.Text = "Semilla:";
             // 
+            // Porcentajes
+            // 
+            Porcentajes.Location = new Point(780, 100);
+            Porcentajes.Name = "Porcentajes";
+            Porcentajes.Size = new Size(180, 43);
+            Porcentajes.TabIndex = 3;
+            Porcentajes.Text = "Porcentajes";
+            Porcentajes.TextImageRelation = TextImageRelation.ImageBeforeText;
+            Porcentajes.UseVisualStyleBackColor = true;
+            Porcentajes.Click += button1_Click;
+            // 
             // FormInventario
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -323,5 +337,7 @@
             grpNuevoLote.PerformLayout();
             ResumeLayout(false);
         }
+
+        private Button Porcentajes;
     }
 }
